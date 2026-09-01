@@ -1,0 +1,146 @@
+{
+  "app_type": "saas_dashboard",
+  "app_name": "Lightweight Product",
+  "brand_name": "Lightweight Product",
+  "tagline": "Reduce refund fraud by 40% with instant access revocation and automated claim pages.",
+  "primary_color": "#2F6F4F",
+  "accent_color": "#F2A63B",
+  "secondary_color": "#F5F7F5",
+  "font_heading": "Sora",
+  "font_body": "Manrope",
+  "voice_tone": "efficient, trustworthy, developer-friendly, minimal",
+  "logo_concept": "A feather combined with a shield, symbolizing lightweight security and protection.",
+  "brand_values": [
+    "Simplicity",
+    "Security",
+    "Vendor empowerment"
+  ],
+  "sections": [
+    "Hero",
+    "Features",
+    "How It Works",
+    "Use Cases",
+    "Pricing",
+    "Testimonials",
+    "CTA"
+  ],
+  "backend_resources": [
+    "bonus_files",
+    "claim_pages",
+    "access_grants",
+    "refunds",
+    "products",
+    "customers",
+    "audit_logs"
+  ],
+  "features": [
+    "Upload bonus files",
+    "Create claim pages",
+    "Issue access after purchase",
+    "Revoke access when a refund occurs"
+  ],
+  "pricing_tiers": [
+    "Starter: $19/month — 3 active products, 500 access grants, basic claim pages",
+    "Pro: $49/month — 10 active products, 5,000 access grants, custom domain",
+    "Enterprise: Custom — unlimited products, API access, priority support"
+  ],
+  "target_customer": "Independent digital product vendors and small e-commerce sellers",
+  "key_metric": "40% reduction in refund-related lost revenue",
+  "hero_stats": [
+    {
+      "value": "40%",
+      "label": "Reduction in refund fraud"
+    },
+    {
+      "value": "5 min",
+      "label": "Setup time to first bonus file"
+    },
+    {
+      "value": "100%",
+      "label": "Automated access revocation"
+    }
+  ],
+  "api_contract": [
+    {
+      "method": "GET",
+      "path": "/api/metrics",
+      "response": "[{active_products, total_grants, active_grants, revoked_grants}]",
+      "description": "Returns key performance metrics for the dashboard."
+    },
+    {
+      "method": "GET",
+      "path": "/api/products",
+      "response": "[{id, name, created_at}]",
+      "description": "Lists all products associated with the vendor."
+    },
+    {
+      "method": "POST",
+      "path": "/api/products",
+      "response": "{id, name}",
+      "description": "Creates a new product."
+    },
+    {
+      "method": "GET",
+      "path": "/api/bonus_files",
+      "response": "[{id, product_id, name, size, uploaded_at}]",
+      "description": "Lists all bonus files for a product."
+    },
+    {
+      "method": "POST",
+      "path": "/api/bonus_files",
+      "response": "{id, product_id, name, size}",
+      "description": "Uploads a bonus file."
+    },
+    {
+      "method": "GET",
+      "path": "/api/claim_pages",
+      "response": "[{id, product_id, url, slug}]",
+      "description": "Gets all claim pages for a product."
+    },
+    {
+      "method": "POST",
+      "path": "/api/claim_pages",
+      "response": "{id, product_id, url, slug}",
+      "description": "Creates a new claim page."
+    },
+    {
+      "method": "POST",
+      "path": "/api/access_grants",
+      "response": "{id, customer_id, product_id, granted_at, status}",
+      "description": "Issues access to a bonus file for a customer."
+    },
+    {
+      "method": "POST",
+      "path": "/api/refunds",
+      "response": "{id, customer_id, product_id, revoked_at}",
+      "description": "Revokes access for a customer upon refund."
+    }
+  ],
+  "roadmap": [
+    {
+      "id": "m1",
+      "title": "Core dashboard with product and bonus file management",
+      "status": "pending"
+    },
+    {
+      "id": "m2",
+      "title": "Claim page creation and hosting",
+      "status": "pending"
+    },
+    {
+      "id": "m3",
+      "title": "Access grant and revocation system with automated triggers",
+      "status": "pending"
+    },
+    {
+      "id": "m4",
+      "title": "Refund integration and audit logging",
+      "status": "pending"
+    },
+    {
+      "id": "m5",
+      "title": "Analytics and metrics dashboard",
+      "status": "pending"
+    }
+  ]
+}
